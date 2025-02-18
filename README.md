@@ -22,6 +22,10 @@ Documentation of my learning process to build a CNC machine using LinuxCNC.
 
 *In this post, I describe the initial setup for the Mesa <a href="https://store.mesanet.com/index.php?route=product/product&product_id=374" title="7I96S STEP/IO Step & dir plus I/O card" target="_blank">7I96S Ethernet motion control STEP/IO Step & Dir plus I/O card</a>. The setup includes selecting the power supply and configuring the network IP address.*
 
+4. [Raspberry Pi 4B LinuxCNC: Wiring the Mesa 7I96S Ethernet Motion Control, Closed-Loop CL57T Stepper Driver, and Nema 23 Stepper Motor](https://behainguyen.wordpress.com/2025/02/16/raspberry-pi-4b-linuxcnc-wiring-the-mesa-7i96s-ethernet-motion-control-closed-loop-cl57t-stepper-driver-and-nema-23-stepper-motor/)
+
+*This post documents the wiring of the Mesa <a href="https://store.mesanet.com/index.php?route=product/product&product_id=374" title="7I96S STEP/IO Step & dir plus I/O card" target="_blank">7I96S Ethernet motion control STEP/IO Step & Dir plus I/O card</a> to the <a href="https://www.omc-stepperonline.com/closed-loop-stepper-driver-v4-1-0-8-0a-24-48vdc-for-nema-17-23-24-stepper-motor-cl57t-v41" title="CL57T Closed-Loop Stepper Driver" target="_blank">CL57T closed-loop stepper driver</a>, which in turn controls the closed-loop <a href="https://www.omc-stepperonline.com/nema-23-closed-loop-stepper-motor-3-0nm-424oz-in-encoder-1000ppr-4000cpr-23hs45-4204d-e1000" title="Mema 23 Stepper Motor" target="_blank">Mema 23</a> stepper motor.*
+
 ## License
 [MIT license](http://www.opensource.org/licenses/mit-license.php)
 and the [GPL license](http://www.gnu.org/licenses/gpl.html).
