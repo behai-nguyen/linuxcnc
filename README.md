@@ -26,6 +26,10 @@ Documentation of my learning process to build a CNC machine using LinuxCNC.
 
 *This post documents the wiring of the Mesa <a href="https://store.mesanet.com/index.php?route=product/product&product_id=374" title="7I96S STEP/IO Step & dir plus I/O card" target="_blank">7I96S Ethernet motion control STEP/IO Step & Dir plus I/O card</a> to the <a href="https://www.omc-stepperonline.com/closed-loop-stepper-driver-v4-1-0-8-0a-24-48vdc-for-nema-17-23-24-stepper-motor-cl57t-v41" title="CL57T Closed-Loop Stepper Driver" target="_blank">CL57T closed-loop stepper driver</a>, which in turn controls the closed-loop <a href="https://www.omc-stepperonline.com/nema-23-closed-loop-stepper-motor-3-0nm-424oz-in-encoder-1000ppr-4000cpr-23hs45-4204d-e1000" title="Mema 23 Stepper Motor" target="_blank">Mema 23</a> stepper motor.*
 
+5. [Raspberry Pi 4B: Natively Built 64 Bit Fully Preemptible Kernel (Real-Time) Gets Overridden](https://behainguyen.wordpress.com/2025/02/19/raspberry-pi-4b-natively-built-64-bit-fully-preemptible-kernel-real-time-gets-overridden/)
+
+*Running <a href="https://linuxcnc.org/docs/html/config/pncconf.html" title="PnCconf Mesa Configuration Wizard" target="_blank">PnCconf</a> on the natively built 64-bit Fully Preemptible Kernel (Real-Time) kernel, as <a href="https://behai-nguyen.github.io/2024/11/03/pi-4b-preempt-rt-kernel-patch.html" title="Raspberry Pi 4B: Natively Build a 64 Bit Fully Preemptible Kernel (Real-Time) with Desktop" target="_blank">previously discussed</a>, resulted in the following message: <code>You are using a simulated-realtime version of LinuxCNC, so testing / tuning of hardware is unavailable</code>. In this post, we will examine what has happened, prove that the finding is correct, and present the results of the jitter or latency test we conducted on the Raspberry Pi OS.*
+
 ## License
 [MIT license](http://www.opensource.org/licenses/mit-license.php)
 and the [GPL license](http://www.gnu.org/licenses/gpl.html).
