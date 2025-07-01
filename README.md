@@ -30,6 +30,10 @@ Documentation of my learning process to build a CNC machine using LinuxCNC.
 
 *Running <a href="https://linuxcnc.org/docs/html/config/pncconf.html" title="PnCconf Mesa Configuration Wizard" target="_blank">PnCconf</a> on the natively built 64-bit Fully Preemptible Kernel (Real-Time) kernel, as <a href="https://behai-nguyen.github.io/2024/11/03/pi-4b-preempt-rt-kernel-patch.html" title="Raspberry Pi 4B: Natively Build a 64 Bit Fully Preemptible Kernel (Real-Time) with Desktop" target="_blank">previously discussed</a>, resulted in the following message: <code>You are using a simulated-realtime version of LinuxCNC, so testing / tuning of hardware is unavailable</code>. In this post, we will examine what has happened, prove that the finding is correct, and present the results of the jitter or latency test we conducted on the Raspberry Pi OS.*
 
+6. [Raspberry Pi 4B LinuxCNC: Wiring the Mesa 7I96S Card and a Contactor to Control a Grinder/Router via the LinuxCNC Application](https://behainguyen.wordpress.com/2025/07/01/raspberry-pi-4b-linuxcnc-wiring-the-mesa-7i96s-card-and-a-contactor-to-control-a-grinder-router-via-the-linuxcnc-application/)
+
+*This post documents how to wire the Mesa <a href="https://store.mesanet.com/index.php?route=product/product&product_id=374" title="7I96S STEP/IO Step & dir plus I/O card" target="_blank">7I96S Ethernet motion control STEP/IO Step & Dir plus I/O card</a> to a contactor, enabling the LinuxCNC application to switch a wood router (or grinder) on and off using G-code commands.*
+
 ## License
 [MIT license](http://www.opensource.org/licenses/mit-license.php)
 and the [GPL license](http://www.gnu.org/licenses/gpl.html).
