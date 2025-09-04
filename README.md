@@ -34,6 +34,10 @@ Documentation of my learning process to build a CNC machine using LinuxCNC.
 
 *This post documents how to wire the Mesa <a href="https://store.mesanet.com/index.php?route=product/product&product_id=374" title="7I96S STEP/IO Step & dir plus I/O card" target="_blank">7I96S Ethernet motion control STEP/IO Step & Dir plus I/O card</a> to a contactor, enabling the LinuxCNC application to switch a wood router (or grinder) on and off using G-code commands.*
 
+7. [Raspberry Pi 4B LinuxCNC: Main Power Distribution (Wiring)](https://behainguyen.wordpress.com/2025/09/04/raspberry-pi-4b-linuxcnc-main-power-distribution-wiring/)
+
+*By “main power,” I mean the wiring from the AC inlet to the three power supply units used in the LinuxCNC system I am building. In this post, I list the relevant components and share the wiring pictures.*
+
 ## License
 [MIT license](http://www.opensource.org/licenses/mit-license.php)
 and the [GPL license](http://www.gnu.org/licenses/gpl.html).
