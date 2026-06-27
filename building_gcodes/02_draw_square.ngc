@@ -1,0 +1,28 @@
+; 22/06/2026 -- written by Gemini.
+
+(--- Setup and Safety Codes ---)
+G21          (Set units to Millimeters)
+G90          (Set to Absolute Distance Mode)
+G17          (Select the X-Y plane)
+G40          (Cancel tool radius compensation)
+G49          (Cancel tool length offset)
+
+(--- Starting the Test Square ---)
+(Ensure we start at the origin at a controlled feedrate)
+G0 X0 Y0 Z0   (Rapid move to the origin)
+G1 F300     (Set linear interpolation movement speed to 300 mm/min)
+
+(1. Move from origin to X 50)
+G1 X50 Y0
+
+(2. From X 50, Y 0, move to Y 50)
+G1 X50 Y50
+
+(3. From X 50, Y 50, move back to X 0, Y 50)
+G1 X0 Y50
+
+(4. From X 0, Y 50, move back to X 0, Y 0)
+G1 X0 Y0
+
+(--- Program End ---)
+M2           (End of program)

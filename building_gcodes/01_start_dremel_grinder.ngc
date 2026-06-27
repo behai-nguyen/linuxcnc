@@ -1,0 +1,9 @@
+; 25/06/2025
+; Post: Raspberry Pi 4B LinuxCNC: Wiring the Mesa 7I96S Card and a Contactor to Control a Grinder/Router via the LinuxCNC Application
+;     https://behainguyen.wordpress.com/2025/07/01/raspberry-pi-4b-linuxcnc-wiring-the-mesa-7i96s-card-and-a-contactor-to-control-a-grinder-router-via-the-linuxcnc-application/
+;     https://behai-nguyen.github.io/2025/06/30/linuxcnc-06-mesa-7i96s-contactor-load.html
+
+M3 S1000  ; Enable spindle
+G4 P10    ; Wait 10 seconds
+M5        ; Stop spindle
+M2
