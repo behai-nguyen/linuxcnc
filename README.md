@@ -38,6 +38,10 @@ Documentation of my learning process to build a CNC machine using LinuxCNC.
 
 *By “main power,” I mean the wiring from the AC inlet to the three power supply units used in the LinuxCNC system I am building. In this post, I list the relevant components and share the wiring pictures.*
 
+8. [Raspberry Pi 4B LinuxCNC: Mesa 7I96S Ethernet Motion Control, Expanded to Four CL57T Drivers and Four Nema 23 Closed-Loop Stepper Motors](https://behainguyen.wordpress.com/2026/06/29/raspberry-pi-4b-linuxcnc-mesa-7i96s-ethernet-motion-control-expanded-to-four-cl57t-drivers-and-four-nema-23-closed-loop-stepper-motors/)
+
+*I now have four CL57T drivers and four Nema 23 closed-loop stepper motors for the X, Y, Y-tandem, and Z axes. This video briefly recaps the configuration and wiring, and concludes by running a test G-code program that draws a square on the X-Y plane, showing the X-axis motor and both Y-axis motors running.*
+
 ## License
 [MIT license](http://www.opensource.org/licenses/mit-license.php)
 and the [GPL license](http://www.gnu.org/licenses/gpl.html).
