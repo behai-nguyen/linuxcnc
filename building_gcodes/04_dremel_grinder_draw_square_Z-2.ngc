@@ -1,0 +1,51 @@
+; 01/07/2026.
+; 
+; Added another two steps to "03_dremel_grinder_draw_square.ngc".
+;
+; Before starting drawing the square, after the spindle reaches full
+; speed, plunge Z-Axis down by 2 machine units.
+;
+; After finishing drawing, retract the Z-Axis up to the 0 position 
+; before stopping the spindle, this is safe, preventing the tool 
+; getting stuck or being dragged.
+;
+; G90 is Absolute mode, "plunge down" must be a negative value.
+
+(--- Setup and Safety Codes ---)
+G21          (Set units to Millimeters)
+G90          (Set to Absolute Distance Mode)
+G17          (Select the X-Y plane)
+G40          (Cancel tool radius compensation)
+G49          (Cancel tool length offset)
+
+(--- Starting the Test Square ---)
+(Ensure we start at the origin at a controlled feedrate)
+G0 X0 Y0 Z0   (Rapid move to the origin)
+G1 F300       (Set linear interpolation movement speed to 300 mm/min)
+
+M3 S1000      (Enable spindle)
+( Gemini optimisation )
+G4 P3         (Wait 3 seconds for spindle to reach full speed)
+
+(--- Plunge Z-Axis ---)
+G1 Z-2       (Move Z-axis down 2 units into the material)
+
+(1. Move from origin to X 50)
+G1 X50 Y0
+
+(2. From X 50, Y 0, move to Y 50)
+G1 X50 Y50
+
+(3. From X 50, Y 50, move back to X 0, Y 50)
+G1 X0 Y50
+
+(4. From X 0, Y 50, move back to X 0, Y 0)
+G1 X0 Y0
+
+(--- Retract Z-Axis before turning off spindle ---)
+G1 Z0        (Bring Z-axis back up to safe starting height)
+
+M5            (Stop spindle)
+
+(--- Program End ---)
+M2           (End of program)
