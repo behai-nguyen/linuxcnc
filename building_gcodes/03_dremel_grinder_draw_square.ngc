@@ -1,0 +1,56 @@
+; 01/07/2026.
+; 
+; Combination of:
+;     https://github.com/behai-nguyen/linuxcnc/blob/main/building_gcodes/01_start_dremel_grinder.ngc
+;     https://github.com/behai-nguyen/linuxcnc/blob/main/building_gcodes/02_draw_square.ngc
+; 
+; Basically, move from home to origin, start the spindle, which is a 
+; Dremel grinder, then draw a square of 50 machine unit on the X-Y plane.
+; 
+; The X-axis motor, the Y-axis motors, and the Dremel grinder are all running
+; while the square is being drawn.
+; 
+; When finishes drawing the square, stop the spindle, and stop the program.
+; 
+; Referenced Posts: 
+; 
+; 1. Raspberry Pi 4B LinuxCNC: Wiring the Mesa 7I96S Card and a Contactor to Control a Grinder/Router via the LinuxCNC Application
+;     https://behainguyen.wordpress.com/2025/07/01/raspberry-pi-4b-linuxcnc-wiring-the-mesa-7i96s-card-and-a-contactor-to-control-a-grinder-router-via-the-linuxcnc-application/
+;     https://behai-nguyen.github.io/2025/06/30/linuxcnc-06-mesa-7i96s-contactor-load.html
+; 
+; 2. Raspberry Pi 4B LinuxCNC: Mesa 7I96S Ethernet Motion Control, Expanded to Four CL57T Drivers and Four Nema 23 Closed-Loop Stepper Motors
+;     https://behainguyen.wordpress.com/2026/06/29/raspberry-pi-4b-linuxcnc-mesa-7i96s-ethernet-motion-control-expanded-to-four-cl57t-drivers-and-four-nema-23-closed-loop-stepper-motors/
+;     https://behai-nguyen.github.io/2026/06/29/linuxcnc-08-four-drivers-motors.html
+
+(--- Setup and Safety Codes ---)
+G21          (Set units to Millimeters)
+G90          (Set to Absolute Distance Mode)
+G17          (Select the X-Y plane)
+G40          (Cancel tool radius compensation)
+G49          (Cancel tool length offset)
+
+(--- Starting the Test Square ---)
+(Ensure we start at the origin at a controlled feedrate)
+G0 X0 Y0 Z0   (Rapid move to the origin)
+G1 F300       (Set linear interpolation movement speed to 300 mm/min)
+
+M3 S1000      (Enable spindle)
+( Gemini optimisation )
+G4 P3         (Wait 3 seconds for spindle to reach full speed)
+
+(1. Move from origin to X 50)
+G1 X50 Y0
+
+(2. From X 50, Y 0, move to Y 50)
+G1 X50 Y50
+
+(3. From X 50, Y 50, move back to X 0, Y 50)
+G1 X0 Y50
+
+(4. From X 0, Y 50, move back to X 0, Y 0)
+G1 X0 Y0
+
+M5            (Stop spindle)
+
+(--- Program End ---)
+M2           (End of program)
