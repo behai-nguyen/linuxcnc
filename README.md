@@ -42,6 +42,10 @@ Documentation of my learning process to build a CNC machine using LinuxCNC.
 
 *I now have four CL57T drivers and four Nema 23 closed-loop stepper motors for the X, Y, Y-tandem, and Z axes. This video briefly recaps the configuration and wiring, and concludes by running a test G-code program that draws a square on the X-Y plane, showing the X-axis motor and both Y-axis motors running.*
 
+9. [Raspberry Pi 4B LinuxCNC: Homing to the Origin (0, 0, 0)](https://behainguyen.wordpress.com/2026/07/06/raspberry-pi-4b-linuxcnc-homing-to-the-origin-0-0-0/)
+
+*My LinuxCNC 2.9.4 home position was set to coordinates I didn't quite understand. I am documenting the Gemini-assisted troubleshooting process I used to set it to the origin <code>(0, 0, 0)</code>. This is not a tutorial, but rather a record of my learning progression.*
+
 ## License
 [MIT license](http://www.opensource.org/licenses/mit-license.php)
 and the [GPL license](http://www.gnu.org/licenses/gpl.html).
