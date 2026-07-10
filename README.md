@@ -46,6 +46,10 @@ Documentation of my learning process to build a CNC machine using LinuxCNC.
 
 *My LinuxCNC 2.9.4 home position was set to coordinates I didn't quite understand. I am documenting the Gemini-assisted troubleshooting process I used to set it to the origin <code>(0, 0, 0)</code>. This is not a tutorial, but rather a record of my learning progression.*
 
+10. [Raspberry Pi 4B LinuxCNC: Resolving the “Unexpected realtime delay on task0…” Startup Error](https://behainguyen.wordpress.com/2026/07/10/raspberry-pi-4b-linuxcnc-resolving-the-unexpected-realtime-delay-on-task0-startup-error/)
+
+*After launching LinuxCNC, it consistently reported <code>Unexpected realtime delay on task0 with period 500000</code>. Despite this startup error, LinuxCNC otherwise appeared to operate normally. I am documenting the AI-assisted troubleshooting process I used to resolve this error. Again, this is not a tutorial, but rather a record of my learning progression.*
+
 ## License
 [MIT license](http://www.opensource.org/licenses/mit-license.php)
 and the [GPL license](http://www.gnu.org/licenses/gpl.html).
