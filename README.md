@@ -50,6 +50,10 @@ Documentation of my learning process to build a CNC machine using LinuxCNC.
 
 *After launching LinuxCNC, it consistently reported <code>Unexpected realtime delay on task0 with period 500000</code>. Despite this startup error, LinuxCNC otherwise appeared to operate normally. I am documenting the AI-assisted troubleshooting process I used to resolve this error. Again, this is not a tutorial, but rather a record of my learning progression.*
 
+11. [Raspberry Pi 4B LinuxCNC: Wiring and “Configuring” Eight NPN Normally Open Inductive Proximity Sensors to the Mesa 7I96S Card](https://behainguyen.wordpress.com/2026/07/18/raspberry-pi-4b-linuxcnc-wiring-and-configuring-eight-npn-normally-open-inductive-proximity-sensors-to-the-mesa-7i96s-card/)
+
+*This post describes how to wire eight NPN NO (Normally Open) inductive proximity sensors to the <a href="https://store.mesanet.com/index.php?route=product/product&product_id=374" title="7I96S STEP/IO card" target="_blank">Mesa 7I96S card</a>. The title and the wiring diagram refer to eight sensors, but I wired, configured, and tested only one. I originally bought eight sensors, but unfortunately managed to fry one, leaving seven available for future use. Again, this is not intended to be a tutorial, but rather a record of my learning progression.*
+
 ## License
 [MIT license](http://www.opensource.org/licenses/mit-license.php)
 and the [GPL license](http://www.gnu.org/licenses/gpl.html).
